@@ -30,7 +30,3 @@ Welcome to my portfolio repository! 🌟 This repo showcases my journey in web d
 
 
 ## Getting Started
-
-1. **Clone the Repository:**
-   ```bash
-   git clone https://github.com/khalil-noui/poolfolio.git
