@@ -14,19 +14,16 @@ Welcome to my portfolio repository! 🌟 This repo showcases my journey in web d
 ## Projects
 
 ### Project 1: [Aide_BE_Aide](link)
-- Brief description of the project.
+- description of the project.
 - Technologies used.
 - Screenshots or demo links.
 
-### Project 2: [E-commerce](link)
-- Brief description of the project.
+### Project 2: [Forget_Name](link)
+- description of the project.
 - Technologies used.
 - Screenshots or demo links.
 
 ### Project 2: [E-Cheri](link)
-- Brief description of the project.
+- description of the project.
 - Technologies used.
 - Screenshots or demo links.
-
-
-## Getting Started
