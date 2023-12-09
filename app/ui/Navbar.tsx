@@ -3,17 +3,19 @@ import Link from "next/link";
 // import Logo from "../../public/images/Logo.png";
 
 export default function Navbar() {
+  const KN = "< />"
   return (
     <header className="py-6 md:px-16 px-6 border-b border-zinc-800 z-30 md:mb-28 mb-20">
       <div className="max-w-6xl mx-auto flex items-center justify-between">
-        {/* <Link href="/">
-          <Image src={Logo} width={25} height={25} alt="logo" />
-        </Link> */}
+         <Link href="/">
+         {/* <Image src={Logo} width={25} height={25} alt="logo" /> */}
+         {KN}
+        </Link> 
         <nav>
           <ul className="flex items-center gap-x-8">
             <li>
               <Link
-                href="/about"
+                href="./ui/about"
                 className="hover:text-orange-400 duration-300"
               >
                 About
@@ -21,7 +23,7 @@ export default function Navbar() {
             </li>
             <li>
               <Link
-                href="/projects"
+                href="./ui/project"
                 className="hover:text-orange-400 duration-300"
               >
                 Projects
