@@ -1,34 +1,51 @@
+"use client"
+
+
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 // import Logo from "../../public/images/Logo.png";
 
 export default function Navbar() {
-  const KN = "< />"
+  const pathName = usePathname();
+
+  const about = "< About />"
+  const projects = "< Projects />"
+  const home = "< Home />"
   return (
-    <header className="py-6 md:px-16 px-6 border-b border-zinc-800 z-30 md:mb-28 mb-20">
+    <header className="py-6 md:px-16 px-6 border-b border-secColor z-30 md:mb-28 mb-20">
       <div className="max-w-6xl mx-auto flex items-center justify-between">
-         <Link href="/">
-         {/* <Image src={Logo} width={25} height={25} alt="logo" /> */}
-         {KN}
+         <Link href="/"
+         className=" text-lg font-extrabold hover:text-hghColor">
+         Khalil Noui
         </Link> 
         <nav>
           <ul className="flex items-center gap-x-8">
             <li>
+            <Link
+                href="/"
+                className=" hover:text-hghColor duration-300"
+              >
+                {home}
+              </Link>
+              </li>
+              <li>
+              <Link
+                href="./ui/projects"
+                className="hover:text-hghColor duration-300"
+              >
+                {projects}
+              </Link>
+            </li>
+              <li>
               <Link
                 href="./ui/about"
-                className="hover:text-orange-400 duration-300"
+                className=" hover:text-hghColor duration-300"
               >
-                About
+                {about}
               </Link>
             </li>
-            <li>
-              <Link
-                href="./ui/project"
-                className="hover:text-orange-400 duration-300"
-              >
-                Projects
-              </Link>
-            </li>
+            
           </ul>
         </nav>
       </div>
