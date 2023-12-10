@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
-import Footer from "./ui/Footer";
+
 import Navbar from "./ui/Navbar"
 
 
@@ -19,10 +19,9 @@ export const metadata: Metadata = {
 export default function RootLayout({children}: {children: React.ReactNode}) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-slate-700 text-orange-100`}>
+      <body className={`${inter.className} bg-neuColor text-txtColor`}>
         <Navbar />
         {children}
-        <Footer />
       </body>
     </html>
   );

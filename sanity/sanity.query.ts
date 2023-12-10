@@ -1,5 +1,6 @@
 import { groq } from "next-sanity";
 import client from "./sanity.client";
+import {unstable_noStore as noStore} from "next/cache" 
 
 export async function getProfile() {
     return client.fetch(
@@ -35,6 +36,7 @@ export async function getJob() {
   };
 
   export async function getProjects() {
+    noStore()
     return client.fetch(
       groq`*[_type == "project"]{
         _id, 
@@ -44,5 +46,18 @@ export async function getJob() {
         "logo": logo.asset->url,
       }`
     );
+  };
+
+  export async function getSingleProject(slug: string) {
+    return client.fetch(
+      groq`*[_type == "project" && slug.current == $slug][0]{
+        _id,
+        name,
+        projectUrl,
+        coverImage { alt, "image": asset->url },
+        tagline,
+        description
+      }`,
+      { slug }
+    );
   }
-  

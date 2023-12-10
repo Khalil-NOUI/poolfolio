@@ -13,11 +13,23 @@ export default async function Home() {
           profile.map((data) => (
             <div key={data._id} className="lg:max-w-2xl max-w-2xl">
               <h1 className="text-3xl font-bold tracking-tight sm:text-5xl mb-6 lg:leading-[3.7rem] leading-tight lg:min-w-[700px] min-w-full">
-                {data.headline}
-              </h1>
-              <p className="text-base text-zinc-400 leading-relaxed">
+      {data.headline.split(' ').map((word, index) => (
+        <span
+          key={index}
+          className={index >= 3  ? 'text-priColor' : 'text-txtColor'}
+        >
+          {word}{' '}
+        </span>
+      ))}
+    </h1>
+
+              <p className="text-base text-txtColor leading-relaxed">
                 {data.shortBio}
               </p>
+              <div
+              className="flex xl:flex-col flex-col items-start xl:justify-center justify-between gap-x-12 xl:mt-22 lg:mt-32 mt-20 mb-16">
+                <h5
+                className="text-xl font-bold tracking-tight sm:text-5xl mb-6 lg:leading-[3.7rem] leading-tight lg:min-w-[700px] min-w-full"> Contact </h5>
               <ul className="flex items-center gap-x-6 my-10">
                 {Object.entries(data.socialLinks)
                   .sort()
@@ -33,6 +45,8 @@ export default async function Home() {
                     </li>
                   ))}
               </ul>
+              </div>
+              
             </div>
           ))}
         <HeroSvg />
