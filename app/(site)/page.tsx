@@ -3,7 +3,7 @@ import type { ProfileType } from "@/app/(site)/lib/types";
 import HeroSvg from "@/app/(site)/ui/HeroSvg";;
 import { head  } from '@/app/(site)/ui/fonts';
 import clsx from "clsx";
-
+import { BiLogoGithub, BiLogoLinkedin, BiLogoTwitter } from 'react-icons/bi';
 export default async function Home() {
   const profile: ProfileType[] = await getProfile();
 
@@ -40,16 +40,23 @@ export default async function Home() {
               <ul className="flex items-center gap-x-6 my-5">
                 {Object.entries(data.socialLinks)
                   .sort()
-                  .map(([key, value], id) => (
+                  .map(([key, value, ], id,) => (
+                    
                     <li key={id}>
-                      <a
-                        href={value}
-                        rel="noreferrer noopener"
-                        className="flex font-bold items-center gap-x-3 mb-5 hover:text-orange-400 duration-300"
-                      >
-                        {key[0].toUpperCase() + key.toLowerCase().slice(1)}
-                      </a>
-                    </li>
+       
+       
+        <a
+          href={value}
+          rel="noreferrer noopener"
+          className="flex font-bold items-center gap-x-3 mb-5 hover:text-orange-400 duration-300"
+        >
+        {key === 'github' && <BiLogoGithub />}
+        {key === 'linkedin' && <BiLogoLinkedin />}
+        {key === 'twitter' && <BiLogoTwitter />}
+          {key[0].toUpperCase() + key.toLowerCase().slice(1)}
+        </a>
+        
+      </li>
                   ))}
               </ul>
               </div>
