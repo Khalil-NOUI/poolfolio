@@ -10,15 +10,6 @@ export const metadata: Metadata = {
   title: "Khalil, Web Developer and UX/UI Designer",
   description: "a Web Developer blending tech and sustainability. Specializing in Next.js, React, and JavaScript, crafting user-friendly applications. Committed to positive impact through innovative digital solutions",
   keywords: ["Portfolio", "personel", "web", "Developer" ],
-  icons: {
-    icon: [
-      {
-
-        url: '/favicon.ico',
-        href: '/favicon.ico',
-      },
-    ],
-  },
 };
 
 
