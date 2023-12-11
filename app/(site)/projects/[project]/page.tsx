@@ -1,9 +1,9 @@
 import Image from "next/image";
 import { Metadata } from "next";
-import { getSingleProject } from "@/sanity/sanity.query";
-import type { ProjectType } from "@/types";
+import { getSingleProject } from "@/app/(site)/lib/sanity/sanity.query";
+import type { ProjectType } from "@/app/(site)/lib/types";
 import { PortableText } from "@portabletext/react";
-
+import { head } from '@/app/(site)/ui/fonts';
 
 type Props = {
   params: {
@@ -35,7 +35,7 @@ export default async function Project({ params }: Props) {
     <main className="max-w-6xl mx-auto lg:px-16 px-8">
       <div className="max-w-3xl mx-auto">
         <div className="flex items-start justify-between mb-4">
-          <h1 className="font-bold lg:text-5xl text-3xl lg:leading-tight mb-4">
+          <h1 className={`${head.className} font-bold lg:text-5xl text-3xl lg:leading-tight mb-4`}>
             {project.name}
           </h1>
 
