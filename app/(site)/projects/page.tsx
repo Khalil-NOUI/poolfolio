@@ -23,14 +23,14 @@ export default async function Project() {
           <Link
             href={`./projects/${project.slug}`}
             key={project._id}
-            className="flex items-center gap-x-4 bg-neuColor border border-zinc-700 hover:border-secColor p-4 rounded-lg ease-in-out"
+            className="flex items-center gap-x-4 bg-transparent border border-zinc-700 hover:border-secColor p-4 rounded-lg ease-in-out"
           >
             <Image
               src={project.logo}
               width={100}
               height={100}
               alt={project.name}
-              className="bg-neuColor rounded-full p-2"
+              className="bg-transparent rounded-full p-2"
             />
             <div>
               <h2 className={`${head.className} font-semibold mb-1`}> {project.name} </h2>

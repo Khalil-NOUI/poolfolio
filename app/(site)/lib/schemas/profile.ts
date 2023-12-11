@@ -1,5 +1,5 @@
 import { defineField } from "sanity";
-import { BiUser } from "react-icons/bi";
+import { BiUser, BiLogoGithub , BiLogoTwitter, BiLogoLinkedin } from "react-icons/bi";
 
 const profile = {
   name: "profile",
@@ -72,18 +72,21 @@ const profile = {
           title: "Github URL",
           type: "url",
           initialValue: "https://github.com/",
+          icon: BiLogoGithub,
         },
         {
           name: "linkedin",
           title: "Linkedin URL",
           type: "url",
           initialValue: "https://linkedin.com/in/",
+          icon: BiLogoLinkedin,
         },
         {
           name: "twitter",
           title: "Twitter URL",
           type: "url",
           initialValue: "https://twitter.com/",
+          icon: BiLogoTwitter,
         },
       ],
       options: {
