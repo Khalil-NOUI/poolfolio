@@ -1,6 +1,7 @@
 import Image from "next/image";
-import { getJob } from "@/sanity/sanity.query";
-import type { JobType } from "@/types";
+import { getJob } from "@/app/(site)/lib/sanity/sanity.query";
+import type { JobType } from "@/app/(site)/lib/types";
+import { montserrat } from '@/app/(site)/ui/fonts';
 
 export default async function Job() {
   const job: JobType[] = await getJob();

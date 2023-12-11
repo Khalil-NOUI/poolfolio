@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import { getProjects } from "@/sanity/sanity.query";
-import type { ProjectType } from "@/types";
-
+import { getProjects } from "@/app/(site)/lib/sanity/sanity.query";
+import type { ProjectType } from "@/app/(site)/lib/types";
+import { montserrat } from '@/app/(site)/ui/fonts';
 export default async function Project() {
   const projects: ProjectType[] = await getProjects();
     console.log("this is projects", projects)

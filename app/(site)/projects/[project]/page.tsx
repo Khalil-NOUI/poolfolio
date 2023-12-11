@@ -1,9 +1,9 @@
 import Image from "next/image";
 import { Metadata } from "next";
-import { getSingleProject } from "@/sanity/sanity.query";
-import type { ProjectType } from "@/types";
+import { getSingleProject } from "@/app/(site)/lib/sanity/sanity.query";
+import type { ProjectType } from "@/app/(site)/lib/types";
 import { PortableText } from "@portabletext/react";
-
+import { montserrat } from '@/app/(site)/ui/fonts';
 
 type Props = {
   params: {

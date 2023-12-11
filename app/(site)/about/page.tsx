@@ -1,9 +1,9 @@
 import Image from "next/image";
-import { getProfile } from "@/sanity/sanity.query";
-import type { ProfileType } from "@/types";
+import { getProfile } from "@/app/(site)/lib/sanity/sanity.query";
+import type { ProfileType } from "@/app/(site)/lib/types";
 import { PortableText } from "@portabletext/react";
 import { BiEnvelope, BiFile } from "react-icons/bi";
-
+import { montserrat } from '@/app/(site)/ui/fonts';
 export default async function About() {
   const profile: ProfileType[] = await getProfile();
 
