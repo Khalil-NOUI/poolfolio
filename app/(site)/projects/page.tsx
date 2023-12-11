@@ -2,14 +2,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { getProjects } from "@/app/(site)/lib/sanity/sanity.query";
 import type { ProjectType } from "@/app/(site)/lib/types";
-import { montserrat } from '@/app/(site)/ui/fonts';
+import { head } from '@/app/(site)/ui/fonts';
 export default async function Project() {
   const projects: ProjectType[] = await getProjects();
     console.log("this is projects", projects)
   return (
     <main className="max-w-7xl mx-auto md:px-16 px-6">
       <section className="max-w-2xl mb-16">
-        <h1 className="text-3xl text-hghColor font-bold tracking-tight sm:text-5xl mb-6 lg:leading-[3.7rem] leading-tight">
+        <h1 
+        className={`${head.className} text-3xl text-hghColor font-bold tracking-tight sm:text-5xl mb-6 lg:leading-[3.7rem] leading-tight`}>
           Featured projects
         </h1>
         <p className="text-base text-txtColor leading-relaxed">
@@ -32,7 +33,7 @@ export default async function Project() {
               className="bg-neuColor rounded-full p-2"
             />
             <div>
-              <h2 className="font-semibold mb-1">{project.name}</h2>
+              <h2 className={`${head.className} font-semibold mb-1`}> {project.name} </h2>
               <div className="text-sm text-zinc-600">{project.tagline}</div>
             </div>
           </Link>

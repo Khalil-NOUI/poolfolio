@@ -3,7 +3,7 @@ import { getProfile } from "@/app/(site)/lib/sanity/sanity.query";
 import type { ProfileType } from "@/app/(site)/lib/types";
 import { PortableText } from "@portabletext/react";
 import { BiEnvelope, BiFile } from "react-icons/bi";
-import { montserrat } from '@/app/(site)/ui/fonts';
+import { head } from '@/app/(site)/ui/fonts';
 export default async function About() {
   const profile: ProfileType[] = await getProfile();
 
@@ -14,7 +14,8 @@ export default async function About() {
           <div key={data._id}>
             <section className="grid lg:grid-cols-2 grid-cols-1 gap-x-6 justify-items-center">
               <div className="order-2 lg:order-none">
-                <h1 className="lg:text-5xl text-4xl lg:leading-tight text-txtColor basis-1/2 font-bold mb-8">
+                <h1 
+                className ={`${head.className} lg:text-5xl text-4xl lg:leading-tight text-txtColor basis-1/2 font-bold mb-8`}>
                   Who Am I ?
                 </h1>
 
