@@ -16,7 +16,7 @@ export default async function About() {
               <div className="order-2 lg:order-none">
                 <h1 
                 className ={`${head.className} lg:text-5xl text-4xl lg:leading-tight text-txtColor basis-1/2 font-bold mb-8`}>
-                  Who Am I ?
+                  Khalil Noui
                 </h1>
 
                 <div className="flex flex-col gap-y-3 text-txtColor leading-relaxed">
@@ -63,7 +63,7 @@ export default async function About() {
                 Here are Some of my Skills.
               </p>
 
-              <ul className="flex text-txtColor flex-wrap items-center gap-3 mt-8">
+              <ul className="flex text-txtColor flex-wrap items-center gap-3 my-8">
                 {data.skills.map((skill, id) => (
                   <li
                     key={id}

@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `${project.name} | Project`,
     description: project.tagline,
     openGraph: {
-      images: project.coverImage?.image || "fallback-image-here",
+      images: project.coverImage?.image || "/fallback.png",
       title: project.name,
       description: project.tagline,
     },
@@ -52,7 +52,7 @@ export default async function Project({ params }: Props) {
           className="rounded-xl border border-zinc-800"
           width={900}
           height={460}
-          src={project.coverImage?.image || "fallback-image-here"}
+          src={project.coverImage?.image || "/fallback.png"}
           alt={project.coverImage?.alt || project.name}
         />
 

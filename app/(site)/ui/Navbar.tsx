@@ -10,9 +10,9 @@ export default function Navbar() {
          <Link href="/"
          className="text-lg font-extrabold ">
           <Image 
-          src="/logo_edit.png"
+          src="/logo.png"
           width={50}
-          height={30}
+          height={50}
           className='hidden md:block'
           alt='Logo'/>
         </Link>

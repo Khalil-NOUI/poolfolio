@@ -36,7 +36,6 @@ export async function getJob() {
   };
 
   export async function getProjects() {
-    noStore()
     return client.fetch(
       groq`*[_type == "project"]{
         _id, 
